@@ -1,0 +1,36 @@
+{
+  "name": "gaggle-mean-median-service",
+  "version": "0.1.0",
+  "bin": {
+    "infrastructure": "bin/infrastructure.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "validate": "npm run check:types && npm run check:lint && npm run check:format",
+    "check:lint": "eslint --ext .ts .",
+    "check:format": "prettier --check \"{lib,bin,test}/**/*.ts\"",
+    "check:types": "tsc --noEmit",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "20.1.7",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "aws-cdk": "2.81.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.0.4"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.81.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
